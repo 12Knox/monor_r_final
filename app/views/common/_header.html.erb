@@ -1,0 +1,22 @@
+<header id="header">
+      <h1 class="main_title">Monor</h1>
+        <nav class="paradeiser">
+          <% if user_signed_in? %>
+            <%= link_to "Monor", root_path %>
+            <span class="paradeiser_dropdown">
+        <a href="#paradeiser-more" id="paradeiser-dropdown">
+            <div class="paradeiser_icon_canvas">
+              <span><%= image_tag current_user.avatar_url %></span>
+            </div>
+        </a>
+        <ul class="paradeiser_children" id="paradeiser-more">
+            <li><%= link_to "#{current_user.user_name}",  edit_user_registration_path %></li>
+            <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
+        </ul>
+            </span>
+          <% else %>
+            <%= link_to 'Twitter login', user_omniauth_authorize_path(:twitter) %></li>
+            <%= link_to 'facebook login', user_omniauth_authorize_path(:facebook) %>
+          <% end %>
+      </nav>
+</header>

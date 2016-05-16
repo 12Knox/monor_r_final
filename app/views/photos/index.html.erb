@@ -1,0 +1,59 @@
+<div class="main_wrap">
+<h2>New rides</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Image</th>
+      <th>Caption</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @photos.each do |photo| %>
+      <tr>
+        <td><%= photo.image %></td>
+        <td><%= photo.caption %></td>
+        <td><%= link_to 'Show', photo %></td>
+        <td><%= link_to 'Edit', edit_photo_path(photo) %></td>
+        <td><%= link_to 'Destroy', photo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<% if user_signed_in? %>
+  <p><%= link_to 'New Photo', new_photo_path %></p>
+<% end %>
+  </div>
+<script src="//cdnjs.cloudflare.com/ajax/libs/headroom/0.7.0/headroom.min.js"></script>
+<script>
+ // enabling to open the overflow menu as the pure css link
+    // would toggle a scroll and therefore hide the menu
+    document.getElementById("paradeiser-dropdown").addEventListener("click", function(event){
+        // stopping the scroll
+        event.preventDefault();
+        // toggling the class
+        document.getElementById("paradeiser-more").classList.toggle("open");
+    });
+ 
+    // hide the menu on click onto greybox
+    document.getElementById("greybox").addEventListener("click", function(event){
+        // stopping the scroll
+        event.preventDefault();
+        // toggling the class
+        document.getElementById("paradeiser-more").classList.remove("open");
+    });
+ 
+    // enabling headroom
+    var myElement = document.querySelector(".paradeiser");
+    var headroom  = new Headroom(myElement, {
+        tolerance : 5,
+        onUnpin : function() {
+            document.getElementById("paradeiser-more").classList.remove("open");
+        }
+    });
+    headroom.init();
+</script>
