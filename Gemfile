@@ -49,3 +49,7 @@ end
   gem 'devise'
   gem 'omniauth-twitter'
   gem 'omniauth-facebook'
+
+  group :production, :staging do
+    gem 'rails_12factor'
+  end
