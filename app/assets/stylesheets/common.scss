@@ -96,6 +96,9 @@ p.develop_new {
 
 section.developed_items {
   margin: 50px 0;
+  width: auto;
+  height: auto;
+  min-height: 2500px;
 }
 
 div.bg_color_expand {
@@ -107,6 +110,7 @@ ul.developed_lists {
   max-width: 500px;
   height: auto;
   margin: 0 auto;
+  margin-bottom: 40px;
   background: #ffffff;
   border-radius: 20px;
   padding: 100px;
