@@ -125,16 +125,86 @@ li.photo_caption {
 }
 
 li.to_the_left a {
-  padding-top: 20px;
-  padding-right: 10px;
-  float: left;
+  margin-top: 30px;
+  text-align: right;
+  float: right;
 }
 
+div.developed_lists {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  max-height: 1000px;
+  margin: 0 auto;
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 100px;
+}
 
+ul.container_of_developed_items {
+  margin: 0;
+  padding: 0;
+}
 
+li.thumb_photo img {
+  width: 500px;
+  height: auto;
+  border-radius: 20px;
+  margin: 0 auto;
+  text-align: center;
+}
 
+li.thumb_comments {
+  width: 100%;
+  max-width: 500px;
+  min-height: 100px;
+  padding-top: 20px;
+}
 
+/*----------------------------------------*/
+/*Like BtN Setting
+/*----------------------------------------*/
 
+li#like-button,
+li#like-sum {
+  width: 100%;
+  max-width: 130px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+li#like-button {
+  margin-top: 20px;
+}
+
+li#like-sum {
+  margin-bottom: -50px;
+}
+
+div.edit_delete_btn {
+  float: right;
+}
+
+/*----------------------------------------*/
+/*Form Setting
+/*----------------------------------------*/
+
+div.field {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+div.field textarea#comment_body {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  min-height: 50px;
+  margin: 0 auto;
+  margin-top: 10px;
+  background: #eeeeee;
+  border-radius: 10px;
+}
 
 
 
