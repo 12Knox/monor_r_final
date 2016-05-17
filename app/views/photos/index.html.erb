@@ -12,7 +12,7 @@
     <% @photos.each do |photo| %>
     <ul class="developed_lists">
         <li><%=link_to image_tag(photo.image), photo %></li>
-        <li class="photo_caption"><%= photo.caption %></li>
+        <li class="photo_caption">Comment:<%= photo.caption %></li>
         <li class="to_the_left"><%= link_to 'Show', photo %></li>
         <li class="to_the_left"><%= link_to 'Edit', edit_photo_path(photo) %></li>
         <li class="to_the_left"><%= link_to 'Destroy', photo, method: :delete, data: { confirm: 'Are you sure?' } %></li>
