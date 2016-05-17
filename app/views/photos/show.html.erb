@@ -1,14 +1,12 @@
 <div class="main_wrap">
 
-<p>
-  <strong>Image:</strong>
-  <%= image_tag(@photo.image_url) if @photo.image.present? %>
-</p>
+<div class="photo_image_url">
+  <p><%= image_tag(@photo.image_url) if @photo.image.present? %></p>
+</div>
 
-<p>
-  <strong>Caption:</strong>
-  <%= @photo.caption %>
-</p>
+<div class="photo_caption">
+  <p><%= @photo.caption %></p>
+</div>
 
 <% if user_signed_in? && @photo.user == current_user %>
   <%= link_to 'Edit', edit_photo_path(@photo) %>

@@ -6,6 +6,7 @@ class User < ActiveRecord::Base
 
   has_many :photos
   has_many :comments
+  has_many :likes
 
 def self.find_or_create_from_oauth(auth)
   User.find_or_create_by(provider: auth.provider, uid: auth.uid) do |user|

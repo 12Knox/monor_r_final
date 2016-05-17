@@ -1,30 +1,22 @@
 <div class="main_wrap">
-<h2>New rides</h2>
-<table>
-  <thead>
-    <tr>
-      <th>Image of Development</th>
-      <th>Caption of Development</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @photos.each do |photo| %>
-      <tr>
-        <td><%= photo.image %></td>
-        <td><%= photo.caption %></td>
-        <td><%= link_to 'Show', photo %></td>
-        <td><%= link_to 'Edit', edit_photo_path(photo) %></td>
-        <td><%= link_to 'Destroy', photo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<% if user_signed_in? %>
-  <p><%= link_to 'New Photo', new_photo_path %></p>
+<h1>Monor</h1>
+  <% if user_signed_in? %>
+  <section class="introduction_message">
+  <p>ようこそ @<%= current_user.user_name %>さん</p>
+  <p>Monorは何かを作りたい人が集う場所です</p>
+  <p>@<%= current_user.user_name %>さんが何かを作りたいのであれば、それはニーズがあるのかなどの調査など必要な時Monorがあります。</p>
+  <p class="develop_new"><%= link_to 'Develop New Items', new_photo_path %></p>
 <% end %>
+  </section>
+  <section class="developed_items clearfix">
+    <% @photos.each do |photo| %>
+    <ul class="developed_lists">
+        <li><%=link_to image_tag(photo.image), photo %></li>
+        <li class="photo_caption"><%= photo.caption %></li>
+        <li class="to_the_left"><%= link_to 'Show', photo %></li>
+        <li class="to_the_left"><%= link_to 'Edit', edit_photo_path(photo) %></li>
+        <li class="to_the_left"><%= link_to 'Destroy', photo, method: :delete, data: { confirm: 'Are you sure?' } %></li>
+      </ul>
+    <% end %>
+  </section>
   </div>

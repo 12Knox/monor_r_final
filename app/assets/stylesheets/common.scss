@@ -14,6 +14,7 @@ $gray: #888;
 
 * {
   font-family: 'Noto Sans Japanese', serif !important;
+  font-weight: lighter;
 }
 html,body {
   height: 100%;
@@ -22,17 +23,22 @@ body {
   background-color: #eeeeee !important;
 }
 
-/* Smartphones CSS */
+/*----------------------------------------*/
+/*Smartphone
+/*----------------------------------------*/
 
 @media screen and (min-width: 0px) and (max-device-width: 475px) {
 body,input,textarea,table,h1,h2,h3,h4,h5,h6 {
-  letter-spacing: 0.1em;
-  font-size: 0.5em;
+  letter-spacing: 0.5em;
   color: #333333;
 }
 
+/*----------------------------------------*/
+/*Basic Setting
+/*----------------------------------------*/
+
 h1 {
-  font-size: 0.9em;
+  font-size: 4em !important;
   width: 100%;
   margin: 0 auto;
 }
@@ -54,69 +60,75 @@ h4,h5,h6 {
 ul {
   list-style: none;
 }
-/*
-header#header {
-  background: #FDBD00;
-  box-shadow: 0px 9px 3px -3px rgba(0,0,0,0.3);
-  -webkit-box-shadow: 0px 9px 3px -3px rgba(0,0,0,0.3);
-  -moz-box-shadow: 0px 9px 3px -3px rgba(0,0,0,0.3);
-  position: fixed;
-  top: 0;
-  width: 100%;
-  height: auto;
-}*/
 
-/*header#header h1.main_title {
-  color: #333333;
-  font-size: 72px;
-  font-weight: lighter;
-  letter-spacing: 25px;
-  width: 100%;
-  margin: 0 auto;
-  margin-top: 120px;
-}*/
-
-a#main_title {
-  font-size: 70px;
-}
-
-ul.nav_self {
-  display: block;
-  float: left;
-  width: 100%;
-  margin: 0 auto;
-  margin-bottom: 20px;
-  position: relative;
-  /*z-index: 10;*/
-}
-
-ul li.each_nav {
-  float: left;
-  padding:0 10px;
-  text-align: center;
-  font-size: 1.5em;
-}
+/*----------------------------------------*/
+/*Content Setting
+/*----------------------------------------*/
 
 div#wrap {
   width: 100%;
-  max-width: 450px;
 }
 
-div#contents {
+div.main_wrap {
+  margin-top: 100px;
+  padding-left: 20px;
+}
+
+header#header {
   width: 100%;
-  max-width: 450px;
+  margin-top: 20px;
 }
 
+div.photo_image_url img {
+  width: 500px;
+  height: auto;
+}
 
+div.photo_caption {
+}
 
+p.develop_new {
+  font-size: 1.5em;
+  font-weight: bold;
+}
 
+section.developed_items {
+  margin: 50px 0;
+}
 
+div.bg_color_expand {
+  padding: 20px;
+}
 
+ul.developed_lists {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  margin: 0 auto;
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 100px;
+}
 
+ul.developed_lists li {
+  width: 100%;
+}
 
+ul.developed_lists li img {
+  width: 500px;
+  height: auto;
+  border-radius: 20px;
+}
 
+li.photo_caption {
+  padding-top: 20px;
+}
 
-
+li.to_the_left a {
+  padding-top: 20px;
+  padding-right: 10px;
+  float: left;
+}
 
 
 
@@ -212,29 +224,6 @@ li.each_nav a {
 ul {
   list-style: none;
 }
-
-/*header#header {
-  background: #FDBD00;
-  box-shadow: 0px 9px 3px -3px rgba(0,0,0,0.3);
-  -webkit-box-shadow: 0px 9px 3px -3px rgba(0,0,0,0.3);
-  -moz-box-shadow: 0px 9px 3px -3px rgba(0,0,0,0.3);
-  position: fixed;
-  top: 0;
-  width: 100%;
-  min-width: 1024px;
-  height: 200px;
-}*/
-
-/*header p.header_phrase {
-  color: #333333;
-  font-size: 0.4em;
-  font-weight: lighter;
-  letter-spacing: 5px;
-  width: 100%;
-  margin-top: -10px;
-  padding-top: 50px;
-  padding-left: 55px;
-}*/
 
 header h1 {
   color: #333333;
