@@ -81,6 +81,10 @@ header#header {
   margin-top: 20px;
 }
 
+section.introduction_message p {
+  text-align: center;
+}
+
 div.photo_image_url img {
   width: 500px;
   height: auto;
@@ -98,7 +102,7 @@ section.developed_items {
   margin: 50px 0;
   width: auto;
   height: auto;
-  min-height: 2500px;
+  min-height: 3000px;
 }
 
 div.bg_color_expand {
