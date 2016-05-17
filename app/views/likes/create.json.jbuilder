@@ -1,0 +1,1 @@
+json.count current_user.likes.count

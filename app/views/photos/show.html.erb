@@ -14,9 +14,9 @@
 <% end %>
 
   <% if @photo.like_user(current_user) %>
-   <div id="like-button">
+   <div id="like-button" class="decrement">
      <%= image_tag("liked.png") %>
-     <%= likes_counter(@likes) %>
+     <div id="like-sum"><%= likes_counter(@likes) %></div>
    </div>
 <% else %>
    <div id="like-button">
@@ -41,3 +41,14 @@
   <% end %>
 </div>
 </div>
+<script>
+$(function() {
+  var $heart = $("#like-button img");
+  $("#like-button").on("click", function(){
+    console.log('clicked')
+    var $likeSum = $("#like-sum")
+    like_function(<%= @photo.id %>, $(this), $heart, $likeSum)
+  });
+})
+</script>
+
