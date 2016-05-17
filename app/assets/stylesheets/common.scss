@@ -16,8 +16,9 @@ $gray: #888;
   font-family: 'Noto Sans Japanese', serif !important;
   font-weight: lighter;
 }
-html,body {
-  height: 100%;
+html, body {
+  height: 100% !important;
+  height: 100vh !important;
 }
 body {
   background-color: #eeeeee !important;
@@ -101,8 +102,7 @@ p.develop_new {
 section.developed_items {
   margin: 50px 0;
   width: auto;
-  height: auto;
-  min-height: 3000px;
+  height: 100%;
 }
 
 div.bg_color_expand {
@@ -120,8 +120,11 @@ ul.developed_lists {
   padding: 100px;
 }
 
-ul.developed_lists li {
+ul.developed_lists li.developed_photo,
+ul.developed_lists li.developed_caption,
+ul.developed_lists li.to_the_left {
   width: 100%;
+  height: auto;
 }
 
 ul.developed_lists li img {
@@ -143,7 +146,8 @@ li.to_the_left a {
 div.developed_lists {
   width: 100%;
   max-width: 500px;
-  height: auto;
+  height: 100%;
+  height: 100vh;
   max-height: 1000px;
   margin: 0 auto;
   background: #ffffff;
@@ -154,6 +158,8 @@ div.developed_lists {
 ul.container_of_developed_items {
   margin: 0;
   padding: 0;
+  width: 100%;
+  height: auto;
 }
 
 li.thumb_photo img {

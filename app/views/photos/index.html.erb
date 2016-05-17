@@ -10,7 +10,7 @@
   <section class="developed_items clearfix">
     <% @photos.each do |photo| %>
     <ul class="developed_lists">
-        <li><%=link_to image_tag(photo.image), photo %></li>
+        <li class="developed_photo"><%=link_to image_tag(photo.image), photo %></li>
         <li class="photo_caption"><%= photo.caption %></li>
         <li class="to_the_left"><%= link_to 'See the Details', photo %></li>
       </ul>
