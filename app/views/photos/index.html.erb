@@ -5,7 +5,6 @@
   <p>Monorは何かを作りたい人が集う場所です</p>
   <p>@<%= current_user.user_name %>さんが何かを作りたいのであれば、それはニーズがあるのかなどの調査など必要な時Monorがあります。</p>
   <p class="develop_new"><%= link_to 'Develop New Items', new_photo_path %></p>
-<% end %>
   </section>
   <section class="developed_items clearfix">
     <% @photos.each do |photo| %>
@@ -16,4 +15,8 @@
       </ul>
     <% end %>
   </section>
-  </div>
+<% else %>
+</div>
+<%= image_path('') %>
+
+<% end %>

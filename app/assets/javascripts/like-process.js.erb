@@ -3,7 +3,7 @@ function like_function(id, button, heart, sum) {
       $.ajax({url: "/likes", type: "delete", data: {photo_id: id, dataType: "json"}})
       .done(function(data){
         button.removeClass("decrement").addClass("increment")
-        heart.attr("src", "<%= image_path('Heart_icon_red_hollow.png') %>")
+        heart.attr("src", "<%= image_path('before_liked.png') %>")
         sum.text(data["count"])
       })
     }else{
