@@ -44,7 +44,9 @@ h1 {
   margin: 0 auto;
 }
 h2 {
-  font-size: 1em;
+  font-size: 2em !important;
+  width: 100%;
+  margin: 10px auto;
 }
 h3 {
   font-size: 0.9em;
@@ -222,23 +224,77 @@ div.field textarea#comment_body {
   border-radius: 10px;
 }
 
+/*----------------------------------------*/
+/*Not signedin Setting
+/*----------------------------------------*/
 
+div.not_signed_in_wrap {
+  width: 100%;
+}
 
+p.main_img {
+  width: 100%;
+  max-width: 850px;
+  margin: 0 auto;
+}
 
+div.contents {
+  width: 100%;
+  max-width: 850px;
+  margin: 0 auto;
+}
 
+/*----------------------------------------*/
+/*Editing Setting
+/*----------------------------------------*/
 
+div.main_wrap_forms {
+  background: #ffffff;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 800px;
+  height: 100%;
+  min-height: 300px;
+  margin: 0 auto;
+}
 
+div.field {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
 
+div.field textarea#photo_caption {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  min-height: 50px;
+  margin: 0 auto;
+  margin-top: 10px;
+  background: #eeeeee;
+  border-radius: 10px;
+}
 
+div.btns_master {
+  margin-left: 20px;
+  padding-left: 20px;
+}
 
+div.actions input {
+  margin-left: 50px;
+}
 
+div.main_wrap_forms a {
+  margin-left: 80px;
+}
 
+div.field {
+  padding: 30px 0;
+}
 
-
-
-
-
-
+div#wrap h2 {
+  padding: 40px;
+}
 
 
 
@@ -285,7 +341,7 @@ h1 {
   font-size: 1.2em;
 }
 h2 {
-  font-size: 1em;
+  font-size: 1.2em;
 }
 h3 {
   font-size: 0.9em;
